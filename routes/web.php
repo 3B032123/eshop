@@ -41,3 +41,12 @@ Route::resource('Products', ProductController::class);
 //products.edit     作用:編輯指定的產品資料
 //products.update   作用:更新指定的產品資料
 //products.destroy  作用:刪除指定的產品資料
+//四個GET路由所串接的控制器方法
+//ProductController@index
+//ProductController@show
+//ProductController@create
+//ProductController@edit
+//其他三個非GET路由所串接的控制器方法
+//ProductController@store
+//ProductController@update
+//ProductController@destroy
