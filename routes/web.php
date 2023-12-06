@@ -17,7 +17,10 @@ use App\Http\Controllers\ProductController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('Products', ProductController::class);
+//Route::resource('Products', ProductController::class);
+Route::resource('Products', ProductController::class)->only([
+    'index', 'show', 'store', 'update', 'destroy'
+]);
 //每一個路由名稱所用的URL、HTTP方法(或稱HTTP動詞)、與所串接的控制器&方法
 //products.index    URL:products                HTTP方法:GET|HEAD 控制器&方法:ProductController@index
 //products.show     URL:products/{product}      HTTP方法:GET|HEAD 控制器&方法:ProductController@show
