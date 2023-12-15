@@ -11,4 +11,18 @@ class Product extends Model
     protected $fillable = [
         'name',
     ];
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function cartitems()
+    {
+        return $this->hasMany(CartItem::class);
+    }
+
+    public function orderitems()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
 }
